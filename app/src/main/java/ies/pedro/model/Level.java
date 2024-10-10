@@ -6,7 +6,6 @@ package ies.pedro.model;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.annotations.Expose;
 
 import com.google.gson.annotations.JsonAdapter;
 import ies.pedro.utils.Size;
@@ -14,7 +13,6 @@ import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javafx.geometry.Point2D;
@@ -142,7 +140,7 @@ public class Level implements Serializable {
             saved = true;
         }
         if (file.getName().endsWith(".xml")){
-            guardarXml(file, level);
+            saveLevelXml(file, level);
             saved = true;
         }
         if (!saved){
@@ -161,7 +159,7 @@ public class Level implements Serializable {
         }
         if (file.getName().endsWith(".xml")){
             saved = true;
-            return cargarXml(file);
+            return loadLevelXml(file);
 
         }
         if (!saved){
@@ -210,8 +208,6 @@ public class Level implements Serializable {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             gson.toJson(level, fw);
             fw.close();
-            String json = gson.toJson(level);
-            System.out.printf(json);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -233,7 +229,7 @@ public class Level implements Serializable {
         return level;
     }
 
-    static private void guardarXml(File file, Level level) {
+    static private void saveLevelXml(File file, Level level) {
         try {
             JAXBContext context = JAXBContext.newInstance(Level.class);
             Marshaller marshaller = context.createMarshaller();
@@ -244,7 +240,7 @@ public class Level implements Serializable {
         }
     }
 
-    static public Level cargarXml(File file) {
+    static public Level loadLevelXml(File file) {
         Level level = null;
         try {
             JAXBContext context = JAXBContext.newInstance(Level.class);

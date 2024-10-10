@@ -58,6 +58,7 @@ public class LevelsPanel extends VBox implements IBlockListener {
         int col = 0, row = 0;
         this.listlevels = new ListView();
         this.listlevels.setOnMouseClicked( mouseEvent -> {
+
             //se llama a la capa superior para informar
             if(this.onseleted!=null) {
                 this.onseleted.accept(this.listlevels.getSelectionModel().getSelectedItem().toString());
@@ -76,8 +77,7 @@ public class LevelsPanel extends VBox implements IBlockListener {
 
             if (result.isPresent()) {
                 result.get();
-                //solo se deja uno, modificar para la parte 2
-                if(this.listlevels.getItems().size()==0) {
+
                     if (result.get() != "") {
                         //se añade y se deja seleccionado
                         this.listlevels.getItems().add(result.get());
@@ -88,7 +88,6 @@ public class LevelsPanel extends VBox implements IBlockListener {
                         }
                     }
                 }
-           }
         });
 
 
@@ -97,7 +96,7 @@ public class LevelsPanel extends VBox implements IBlockListener {
         this.delete.setOnMouseClicked(mouseEvent -> {
             if (this.listlevels.getSelectionModel().getSelectedItem() != null) {
                 if(this.ondelete!=null) {
-                    this.ondelete.accept("vacio");
+                    this.ondelete.accept(listlevels.getSelectionModel().getSelectedItem().toString());
                 }
                 this.listlevels.getItems().remove(this.listlevels.getSelectionModel().getSelectedItem());
             }
@@ -107,7 +106,7 @@ public class LevelsPanel extends VBox implements IBlockListener {
         this.reset = new Button("Reset");
         this.reset.setOnMouseClicked(mouseEvent -> {
                     if(this.onreset!=null && this.listlevels.getSelectionModel()!=null) {
-                        this.onreset.accept("vacio");
+                        this.onreset.accept(listlevels.getSelectionModel().getSelectedItem().toString());
                     }
 
         });

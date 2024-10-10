@@ -59,14 +59,15 @@ public class App extends Application {
     private EditorCanvas editor;
     private MediaPlayer mp;
     private LevelsPanel levelsPanel;
-    private  Level level;
+    private Level level;
 
+    private Levels levels;
 
     public App() {
         super();
         this.level = new Level();
         fileChooser = new FileChooser();
-
+        levels = new Levels();
     }
 
 
@@ -75,7 +76,7 @@ public class App extends Application {
         BorderPane border = new BorderPane();
         border.setCenter(this.createEditor());
         border.setLeft(this.createBlockMenu());
-        border.setRight(this.levelsPanel=this.createLevelPanel());
+        border.setRight(this.levelsPanel = this.createLevelPanel());
         border.setTop(this.createMenu());
         this.scene = new Scene(border, this.width + 330, this.height + 50);
         stage.setTitle("Arkanoid Level Editor");
@@ -94,8 +95,6 @@ public class App extends Application {
 
     /**
      * Crea el panel lateral de bloques
-     *
-
      */
     private Pane createBlockMenu() {
         BlocksPanel b = new BlocksPanel();
@@ -113,8 +112,6 @@ public class App extends Application {
 
     /**
      * crea el editor de nivels
-     *
-
      */
     private EditorCanvas createEditor() {
         this.editor = new EditorCanvas();
@@ -129,33 +126,51 @@ public class App extends Application {
 
     /**
      * crea el panel de niveles, con lista de niveles, botones administración y música
-     *
      */
     private LevelsPanel createLevelPanel() {
         LevelsPanel levelspanel = new LevelsPanel();
         levelspanel.init();
+
         levelspanel.setOnadd((s) -> {
             this.level = new Level(s);
+            levels.getLevels().add(this.level);
             this.editor.setLevel(level);
             this.deleteMediaplayer();
-
         });
         levelspanel.setOndelete((s) -> {
-
+            levels.removeLevel(s);
             this.deleteMediaplayer();
-            this.level=null;
+            this.level = null;
             this.editor.setLevel(null);
 
         });
         levelspanel.setOnseleted((s) -> {
+            if (s != null) {
+                System.out.println("Nivel seleccionado: " + s);
 
+                boolean nivelEncontrado = false;
+                Level selectedLevel = null;
+                for (Level level : levels.getLevels()) {
+                    if (level.getName().equals(s)) { // Comparar el nombre del nivel con 's'
+                        selectedLevel = level;
+                        nivelEncontrado = true; // Indicar que el nivel fue encontrado
+                        break; // Romper el bucle, ya que el nivel fue encontrado
+                    }
+                }
+                if (nivelEncontrado) {
+                    this.level = selectedLevel; // Actualizar el nivel en el editor
+                    this.editor.setLevel(this.level);  // Pasar el nivel al editor
+                    this.deleteMediaplayer();          // Detener el reproductor de media si hay uno
+                } else {
+                    System.out.println("El nivel seleccionado no se encontró.");
+                }
+            }
 
 
         });
 
-        levelspanel.setOnreset(s ->
-        {
-            if(this.editor.getLevel()!=null) {
+        levelspanel.setOnreset(s -> {
+            if (this.editor.getLevel() != null) {
                 this.level.reset();
                 //this.editor.getLevel().reset();
                 this.editor.setRepaintbackground(true);
@@ -167,7 +182,7 @@ public class App extends Application {
         levelspanel.setOnplay(() -> {
             if (this.editor.getLevel() != null) {
                 //si es nulo y existe una cancion
-                if ((this.mp == null && this.level.getSound() != null ) || (this.mp!=null && this.mp.getMedia().getSource()!= this.level.getSound())) {
+                if ((this.mp == null && this.level.getSound() != null) || (this.mp != null && this.mp.getMedia().getSource() != this.level.getSound())) {
                     this.mp = new MediaPlayer(new Media(new File(this.level.getSound().replace("\\", "//")).toURI().toString()));
                     this.mp.setCycleCount(MediaPlayer.INDEFINITE);
                 }
@@ -196,19 +211,15 @@ public class App extends Application {
         Menu fileMenu = new Menu("File");
         MenuItem newMenuItem = new MenuItem("New");
         newMenuItem.setOnAction(eh -> {
-           this.level.reset();
-           this.editor.reset();
-           this.levelsPanel.reset();
+            this.level.reset();
+            this.editor.reset();
+            this.levelsPanel.reset();
         });
         MenuItem saveLevelMenuItem = new MenuItem("Save Level");
         saveLevelMenuItem.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
             File file = fileChooser.showSaveDialog(scene.getWindow());
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("XML", "*.xml"),
-                    new FileChooser.ExtensionFilter("Json", "*.json"),
-                    new FileChooser.ExtensionFilter("Bin", "*.bin")
-            );
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
             if (file != null) {
                 try {
                     Level.saveLevel(file, level);
@@ -222,19 +233,15 @@ public class App extends Application {
         MenuItem loadLevelMenuItem = new MenuItem("Load Level");
         loadLevelMenuItem.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("XML", "*.xml*"),
-                    new FileChooser.ExtensionFilter("Json", "*.json"),
-                    new FileChooser.ExtensionFilter("Bin", "*.bin")
-            );
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml*"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
             try {
                 File file = fileChooser.showOpenDialog(scene.getWindow());
-                level=Level.loadLevel(file);
+                level = Level.loadLevel(file);
+                levels.getLevels().add(level);
                 this.editor.setLevel(level);
                 this.deleteMediaplayer();
-                this.levelsPanel.reset();
                 this.levelsPanel.getListlevels().getItems().add(this.level.getName());
-            }catch (Exception e) {
+            } catch (Exception e) {
                 throw new RuntimeException(e);
             }
 
@@ -243,22 +250,14 @@ public class App extends Application {
         saveMenuItem.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
             File file = fileChooser.showSaveDialog(scene.getWindow());
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("XML", "*.xml"),
-                    new FileChooser.ExtensionFilter("Json", "*.json"),
-                    new FileChooser.ExtensionFilter("Bin", "*.bin")
-            );
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
 
 
         });
         MenuItem loadMenuItem = new MenuItem("Load");
         loadMenuItem.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("XML", "*.xml*"),
-                    new FileChooser.ExtensionFilter("Json", "*.json"),
-                    new FileChooser.ExtensionFilter("Bin", "*.bin")
-            );
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml*"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
             File file = fileChooser.showOpenDialog(scene.getWindow());
 
         });
@@ -267,16 +266,14 @@ public class App extends Application {
         optionsMenu.getItems().add(soundMenu);
         soundMenu.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("mp3", "*.mp3*")
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("mp3", "*.mp3*")
 
             );
             File file = fileChooser.showOpenDialog(scene.getWindow());
             if (file != null) {
                 this.level.setSound(file.getAbsolutePath());
                 this.editor.getLevel().setSound(file.getAbsolutePath());
-                if(this.mp!=null)
-                    this.mp.stop();
+                if (this.mp != null) this.mp.stop();
 
             }
 
@@ -317,22 +314,14 @@ public class App extends Application {
         MenuItem xmlToHMTLLevelMenuItem = new MenuItem("Level XMLToHTML");
         xmlToHMTLLevelMenuItem.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("XML", "*.xml*"),
-                    new FileChooser.ExtensionFilter("Json", "*.json"),
-                    new FileChooser.ExtensionFilter("Bin", "*.bin")
-            );
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml*"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
             File file = fileChooser.showOpenDialog(scene.getWindow());
 
         });
         MenuItem xmlToHMTLLevelsMenuItem = new MenuItem("Levels XMLToHTML");
         xmlToHMTLLevelsMenuItem.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("XML", "*.xml*"),
-                    new FileChooser.ExtensionFilter("Json", "*.json"),
-                    new FileChooser.ExtensionFilter("Bin", "*.bin")
-            );
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml*"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
             File file = fileChooser.showOpenDialog(scene.getWindow());
 
         });
@@ -341,8 +330,7 @@ public class App extends Application {
         MenuItem exitMenuItem = new MenuItem("Salir");
         exitMenuItem.setOnAction(actionEvent -> Platform.exit());
 
-        fileMenu.getItems().addAll(newMenuItem,saveLevelMenuItem, saveMenuItem, loadLevelMenuItem, loadMenuItem, xmlToHMTLLevelMenuItem, xmlToHMTLLevelsMenuItem,
-                new SeparatorMenuItem(), exitMenuItem);
+        fileMenu.getItems().addAll(newMenuItem, saveLevelMenuItem, saveMenuItem, loadLevelMenuItem, loadMenuItem, xmlToHMTLLevelMenuItem, xmlToHMTLLevelsMenuItem, new SeparatorMenuItem(), exitMenuItem);
 
         menuBar.getMenus().addAll(fileMenu, optionsMenu);//, webMenu, sqlMenu);
         return menuBar;

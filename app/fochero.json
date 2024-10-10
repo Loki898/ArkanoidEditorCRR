@@ -11,9 +11,23 @@
       {},
       {},
       {},
-      {
-        "value": "Orange"
-      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
       {},
       {},
       {},
@@ -39,25 +53,15 @@
       {}
     ],
     [
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Orange"
-      },
       {},
       {},
       {},
-      {
-        "value": "Green"
-      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
       {},
       {},
       {},
@@ -66,353 +70,11 @@
     ],
     [
       {},
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Green"
-      },
       {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
       {},
       {},
       {},
-      {
-        "value": "Green"
-      },
       {},
-      {}
-    ],
-    [
-      {},
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Green"
-      },
-      {},
-      {},
-      {},
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {},
-      {}
-    ],
-    [
-      {},
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Red"
-      },
-      {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {},
-      {},
-      {}
-    ],
-    [
-      {},
-      {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Red"
-      },
-      {},
-      {},
-      {},
-      {},
-      {
-        "value": "Orange"
-      },
-      {},
-      {},
-      {}
-    ],
-    [
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {},
-      {
-        "value": "Orange"
-      },
-      {}
-    ],
-    [
-      {
-        "value": "Orange"
-      },
-      {},
-      {},
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Red"
-      },
-      {},
-      {
-        "value": "Red"
-      },
-      {},
-      {},
-      {},
-      {
-        "value": "Orange"
-      },
-      {}
-    ],
-    [
-      {},
-      {},
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Red"
-      },
-      {},
-      {
-        "value": "Green"
-      },
-      {},
-      {},
-      {
-        "value": "Green"
-      },
-      {},
-      {}
-    ],
-    [
-      {},
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Red"
-      },
-      {},
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Red"
-      },
-      {},
-      {}
-    ],
-    [
-      {},
-      {},
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Orange"
-      },
-      {},
-      {
-        "value": "Green"
-      },
-      {},
-      {},
-      {},
-      {
-        "value": "Green"
-      },
-      {},
-      {}
-    ],
-    [
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Red"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Green"
-      },
-      {}
-    ],
-    [
-      {},
-      {},
-      {},
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {},
-      {},
-      {
-        "value": "Red"
-      },
-      {},
-      {},
-      {}
-    ],
-    [
-      {
-        "value": "Green"
-      },
-      {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Orange"
-      },
-      {
-        "value": "Red"
-      },
       {},
       {},
       {},
@@ -424,28 +86,16 @@
     ],
     [
       {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
       {},
       {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Orange"
-      },
       {},
       {},
-      {
-        "value": "Green"
-      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
       {},
       {},
       {}
@@ -456,17 +106,11 @@
       {},
       {},
       {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Orange"
-      },
       {},
       {},
-      {
-        "value": "Orange"
-      },
+      {},
+      {},
+      {},
       {},
       {},
       {},
@@ -476,24 +120,14 @@
       {},
       {},
       {},
-      {
-        "value": "Green"
-      },
       {},
       {},
       {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
+      {},
+      {},
+      {},
+      {},
+      {},
       {},
       {},
       {}
@@ -501,26 +135,16 @@
     [
       {},
       {},
-      {
-        "value": "Green"
-      },
       {},
       {},
       {},
       {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
       {},
-      {
-        "value": "Green"
-      },
-      {
-        "value": "Green"
-      },
+      {},
+      {},
+      {},
+      {},
+      {},
       {},
       {}
     ],
@@ -529,9 +153,167 @@
       {},
       {},
       {},
-      {
-        "value": "Green"
-      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
       {},
       {},
       {},
@@ -703,8 +485,7 @@
       {}
     ]
   ],
-  "time": 268.53614457831327,
-  "sound": "C:\\Users\\Cristian\\Desktop\\clase\\AD\\AD_UT1_Practica1_ArkanoidTemplate\\sounds\\mariobros.mp3",
-  "name": "papasote",
-  "backgroundPosition": "696.0,696.0"
+  "time": 0.0,
+  "name": "zxczxzxcv",
+  "backgroundPosition": "928.0,928.0"
 }
