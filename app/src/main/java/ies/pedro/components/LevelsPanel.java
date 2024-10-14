@@ -77,7 +77,6 @@ public class LevelsPanel extends VBox implements IBlockListener {
 
             if (result.isPresent()) {
                 result.get();
-
                     if (result.get() != "") {
                         //se añade y se deja seleccionado
                         this.listlevels.getItems().add(result.get());

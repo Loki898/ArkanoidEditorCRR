@@ -1,28 +1,24 @@
 package ies.pedro.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Levels {
-    private ArrayList<Level> levels;
+        private HashMap<String,Level> levels;
 
     public Levels() {
-        levels = new ArrayList<>();
+        levels = new HashMap<>();
     }
-
-    public ArrayList<Level> getLevels() {
+    public HashMap<String,Level> getLevels() {
         return levels;
     }
-    public void setLevels(ArrayList<Level> levels) {
+    public void setLevels(HashMap<String,Level> levels) {
         this.levels = levels;
     }
     public void addLevel(Level level) {
-        levels.add(level);
+        levels.put(level.getName(), level);
     }
     public void removeLevel(String level) {
-        for (int i = 0; i < levels.size(); i++) {
-            if (level.equals(levels.get(i).getName())) {
-                levels.remove(i);
-            }
-        }
+       levels.remove(level);
     }
 }

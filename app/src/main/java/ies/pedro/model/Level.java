@@ -28,6 +28,7 @@ import java.util.Arrays;
 
 @XmlRootElement
 public class Level implements Serializable {
+
     private Size size;
     private Block[][] blocks;
     private double time;
@@ -36,7 +37,6 @@ public class Level implements Serializable {
 
 
     @JsonAdapter(ies.pedro.utils.Point2DAdapterJson.class)
-
     private Point2D backgroundPosition;
 
     private static Size s= new Size(224 / 16, 240 / 8);

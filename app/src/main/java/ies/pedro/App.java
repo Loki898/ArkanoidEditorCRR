@@ -133,7 +133,7 @@ public class App extends Application {
 
         levelspanel.setOnadd((s) -> {
             this.level = new Level(s);
-            levels.getLevels().add(this.level);
+            levels.addLevel(this.level);
             this.editor.setLevel(level);
             this.deleteMediaplayer();
         });
@@ -150,23 +150,13 @@ public class App extends Application {
 
                 boolean nivelEncontrado = false;
                 Level selectedLevel = null;
-                for (Level level : levels.getLevels()) {
-                    if (level.getName().equals(s)) { // Comparar el nombre del nivel con 's'
-                        selectedLevel = level;
-                        nivelEncontrado = true; // Indicar que el nivel fue encontrado
-                        break; // Romper el bucle, ya que el nivel fue encontrado
-                    }
-                }
-                if (nivelEncontrado) {
-                    this.level = selectedLevel; // Actualizar el nivel en el editor
-                    this.editor.setLevel(this.level);  // Pasar el nivel al editor
-                    this.deleteMediaplayer();          // Detener el reproductor de media si hay uno
-                } else {
-                    System.out.println("El nivel seleccionado no se encontró.");
-                }
+                selectedLevel = levels.getLevels().get(s);
+
+                    this.level = selectedLevel;
+                    this.editor.setLevel(this.level);
+                    this.deleteMediaplayer();
+
             }
-
-
         });
 
         levelspanel.setOnreset(s -> {
@@ -237,7 +227,7 @@ public class App extends Application {
             try {
                 File file = fileChooser.showOpenDialog(scene.getWindow());
                 level = Level.loadLevel(file);
-                levels.getLevels().add(level);
+                levels.addLevel(level);
                 this.editor.setLevel(level);
                 this.deleteMediaplayer();
                 this.levelsPanel.getListlevels().getItems().add(this.level.getName());
