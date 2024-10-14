@@ -147,15 +147,11 @@ public class App extends Application {
         levelspanel.setOnseleted((s) -> {
             if (s != null) {
                 System.out.println("Nivel seleccionado: " + s);
-
-                boolean nivelEncontrado = false;
                 Level selectedLevel = null;
                 selectedLevel = levels.getLevels().get(s);
-
-                    this.level = selectedLevel;
-                    this.editor.setLevel(this.level);
-                    this.deleteMediaplayer();
-
+                this.level = selectedLevel;
+                this.editor.setLevel(this.level);
+                this.deleteMediaplayer();
             }
         });
 
@@ -241,15 +237,18 @@ public class App extends Application {
             final FileChooser fileChooser = new FileChooser();
             File file = fileChooser.showSaveDialog(scene.getWindow());
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
-
-
+            Levels.saveLevels(file, levels);
         });
         MenuItem loadMenuItem = new MenuItem("Load");
         loadMenuItem.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml*"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
             File file = fileChooser.showOpenDialog(scene.getWindow());
-
+            levels = Levels.loadLevels(file);
+            System.out.println(levels.getLevels().size());
+            for (String level : levels.getLevels().keySet()) {
+                levelsPanel.getListlevels().getItems().add(level);
+            }
         });
         Menu optionsMenu = new Menu("Options");
         MenuItem soundMenu = new MenuItem("Sound");
