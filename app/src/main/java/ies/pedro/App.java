@@ -246,7 +246,7 @@ public class App extends Application {
             File file = fileChooser.showOpenDialog(scene.getWindow());
             levels = Levels.loadLevels(file);
             System.out.println(levels.getLevels().size());
-            //solucionar que al cargarlos no se muestran por pantalla
+            //soluciona que al cargarlos no se muestran por pantalla
             for (String level : levels.getLevels().keySet()) {
                 levelsPanel.getListlevels().getItems().add(level);
             }

@@ -2,6 +2,11 @@ package ies.pedro.model;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import javafx.scene.control.Alert;
 
 import java.io.File;
@@ -11,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+@XmlRootElement
 public class Levels {
         private HashMap<String,Level> levels;
 
@@ -39,7 +45,7 @@ public class Levels {
             saved = true;
         }
         if (file.getName().endsWith(".xml")){
-            //saveLevelsXml(file, level);
+            saveLevelsXml(file, levels);
             saved = true;
         }
         if (!saved){
@@ -57,7 +63,7 @@ public class Levels {
         }
         if (file.getName().endsWith(".xml")){
             saved = true;
-            //return loadLevelsXml(file);
+            return loadLevelsXml(file);
 
         }
         if (!saved){
@@ -96,6 +102,28 @@ public class Levels {
             e.printStackTrace();
         }
 
+        return levels;
+    }
+    private static void saveLevelsXml(File file, Levels levels) {
+        try {
+            JAXBContext context = JAXBContext.newInstance(Levels.class);
+            Marshaller marshaller = context.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.marshal(levels, new FileWriter(file));
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private static Levels loadLevelsXml(File file) {
+        Levels levels = null;
+        try {
+            JAXBContext context = JAXBContext.newInstance(Levels.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            levels = (Levels) unmarshaller.unmarshal(file);
+
+        } catch (JAXBException e) {
+            throw new RuntimeException(e);
+        }
         return levels;
     }
 }
