@@ -33,6 +33,8 @@ dependencies {
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("jakarta.xml.bind:jakarta.xml.bind-api:3.0.1")
     implementation("com.sun.xml.bind:jaxb-impl:3.0.2")
+    implementation("xerces:xercesImpl:2.12.0")
+    implementation("xalan:xalan:2.7.2")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

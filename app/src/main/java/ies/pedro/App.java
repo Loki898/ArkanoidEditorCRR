@@ -8,40 +8,29 @@ import ies.pedro.components.Block;
 import ies.pedro.model.*;
 import ies.pedro.utils.Size;
 import jakarta.xml.bind.JAXBException;
-
 import java.io.File;
 import java.io.IOException;
-
 import java.security.Principal;
-
 import java.util.Optional;
-
 import java.util.logging.Logger;
-
 import javafx.application.Application;
 import javafx.application.Platform;
-
-
 import javafx.geometry.Point2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-
-
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
-
 import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
-
 import javafx.scene.layout.Pane;
-
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javax.xml.transform.TransformerException;
 
 public class App extends Application {
 
@@ -306,14 +295,22 @@ public class App extends Application {
             final FileChooser fileChooser = new FileChooser();
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml*"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
             File file = fileChooser.showOpenDialog(scene.getWindow());
-
+            try {
+                Level.XmlToHtml(file);
+            } catch (TransformerException e) {
+                throw new RuntimeException(e);
+            }
         });
         MenuItem xmlToHMTLLevelsMenuItem = new MenuItem("Levels XMLToHTML");
         xmlToHMTLLevelsMenuItem.setOnAction(actionEvent -> {
             final FileChooser fileChooser = new FileChooser();
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml*"), new FileChooser.ExtensionFilter("Json", "*.json"), new FileChooser.ExtensionFilter("Bin", "*.bin"));
             File file = fileChooser.showOpenDialog(scene.getWindow());
-
+            try {
+                Levels.XmlToHtml(file);
+            } catch (TransformerException e) {
+                throw new RuntimeException(e);
+            }
         });
         optionsMenu.getItems().add(timeMenu);
 

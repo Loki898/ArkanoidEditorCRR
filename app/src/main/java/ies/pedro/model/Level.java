@@ -19,9 +19,17 @@ import javafx.geometry.Point2D;
 import javafx.scene.control.Alert;
 
 
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 
 
@@ -251,5 +259,19 @@ public class Level implements Serializable {
             throw new RuntimeException(e);
         }
         return level;
+    }
+
+    static public void XmlToHtml(File file) throws TransformerException {
+        StreamSource xlsStreamSource = new StreamSource(Paths
+                .get("level.xsl")
+                .toAbsolutePath().toFile());
+        StreamSource xmlStreamSource = new StreamSource(file);
+        TransformerFactory transformerFactory =
+                TransformerFactory.newInstance("org.apache.xalan.processor.TransformerFactoryImpl", null);
+        Path pathToHtmlFile = Paths.get("./level.html");
+        StreamResult result = new StreamResult(pathToHtmlFile.toFile());
+        Transformer transformer =
+                transformerFactory.newTransformer(xlsStreamSource);
+        transformer.transform(xmlStreamSource, result);
     }
 }

@@ -9,10 +9,17 @@ import jakarta.xml.bind.Unmarshaller;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import javafx.scene.control.Alert;
 
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -125,5 +132,19 @@ public class Levels {
             throw new RuntimeException(e);
         }
         return levels;
+    }
+
+    static public void XmlToHtml(File file) throws TransformerException {
+        StreamSource xlsStreamSource = new StreamSource(Paths
+                .get("levels.xsl")
+                .toAbsolutePath().toFile());
+        StreamSource xmlStreamSource = new StreamSource(file);
+        TransformerFactory transformerFactory =
+                TransformerFactory.newInstance("org.apache.xalan.processor.TransformerFactoryImpl", null);
+        Path pathToHtmlFile = Paths.get("./levels.html");
+        StreamResult result = new StreamResult(pathToHtmlFile.toFile());
+        Transformer transformer =
+                transformerFactory.newTransformer(xlsStreamSource);
+        transformer.transform(xmlStreamSource, result);
     }
 }
