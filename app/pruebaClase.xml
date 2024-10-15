@@ -137,23 +137,9 @@
         <item/>
         <item/>
         <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-    </blocks>
-    <blocks>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
+        <item>
+            <value>Green</value>
+        </item>
         <item/>
         <item/>
         <item/>
@@ -222,6 +208,24 @@
         <item/>
         <item/>
         <item/>
+        <item/>
+        <item/>
+    </blocks>
+    <blocks>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>
+            <value>Green</value>
+        </item>
         <item/>
         <item/>
     </blocks>

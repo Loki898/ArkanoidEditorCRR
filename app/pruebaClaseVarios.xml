@@ -753,14 +753,46 @@
             </value>
         </entry>
         <entry>
-            <key>prueba</key>
+            <key>probandoColores</key>
             <value>
                 <backgroundPosition>0.0,0.0</backgroundPosition>
                 <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
                     <item/>
                     <item/>
                     <item/>
                     <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
                     <item/>
                     <item/>
                     <item/>
@@ -773,17 +805,179 @@
                     <item/>
                 </blocks>
                 <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
                     <item/>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item>
+                        <value>Red</value>
                     </item>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
                     </item>
                     <item/>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
                     <item/>
                     <item/>
                     <item/>
@@ -795,20 +989,50 @@
                     <item/>
                 </blocks>
                 <blocks>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
                     <item/>
                     <item/>
                     <item/>
@@ -818,289 +1042,25 @@
                 </blocks>
                 <blocks>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
                     <item>
-                        <value>Yellow</value>
+                        <value>Red</value>
                     </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
                     <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
                     <item>
-                        <value>Yellow</value>
+                        <value>Red</value>
                     </item>
                     <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
                     <item/>
                     <item>
-                        <value>Yellow</value>
+                        <value>Red</value>
                     </item>
                     <item/>
                     <item/>
@@ -1109,130 +1069,20 @@
                     <item/>
                 </blocks>
                 <blocks>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
                     <item/>
                     <item>
-                        <value>Yellow</value>
+                        <value>Red</value>
                     </item>
                     <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
                     <item/>
                     <item/>
                     <item/>
                     <item/>
                     <item/>
-                </blocks>
-                <blocks>
                     <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item/>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Yellow</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                </blocks>
-                <blocks>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
                     <item/>
                     <item/>
@@ -1250,15 +1100,121 @@
                     <item/>
                     <item/>
                     <item>
-                        <value>Magenta</value>
-                    </item>
-                    <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
                     <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item/>
+                    <item/>
+                    <item/>
                     <item>
-                        <value>Magenta</value>
+                        <value>Red</value>
                     </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                </blocks>
+                <blocks>
+                    <item/>
+                    <item/>
+                    <item>
+                        <value>Red</value>
+                    </item>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
+                    <item/>
                     <item/>
                     <item/>
                 </blocks>
@@ -1422,29 +1378,12 @@
                     <item/>
                     <item/>
                 </blocks>
-                <blocks>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                    <item/>
-                </blocks>
-                <name>prueba</name>
+                <name>probandoColores</name>
                 <size>
                     <height>30</height>
                     <width>14</width>
                 </size>
-                <sound>C:\Users\Cristian\Desktop\clase\AD\AD_UT1_Practica_ArkanoidCristian\ArkanoidEditorCRR-master\sounds\toki.mp3</sound>
-                <time>301.60240963855426</time>
+                <time>0.0</time>
             </value>
         </entry>
     </levels>

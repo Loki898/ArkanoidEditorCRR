@@ -36,17 +36,45 @@
                                 <!-- Para cada item dentro de un bloque -->
                             <xsl:for-each select="item">
                                 <td>
-                                    <xsl:choose>
-                                        <!-- Si el item tiene un valor, mostrarlo -->
-                                        <xsl:when test="value">
-                                            <xsl:value-of select="value"/><br/>
-                                        </xsl:when>
-                                        <!-- Si no tiene valor, mostrar un espacio vacío usando la entidad declarada -->
-                                        <xsl:otherwise>
-                                            <br/>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </td>
+        <xsl:choose>
+            <!-- Si el valor es 'Red' -->
+            <xsl:when test="value = 'Red'">
+                <xsl:attribute name="style">background-color: red;</xsl:attribute>
+            </xsl:when>
+            <!-- Si el valor es 'White' -->
+            <xsl:when test="value = 'White'">
+                <xsl:attribute name="style">background-color: white;</xsl:attribute>
+            </xsl:when>
+            <!-- Si el valor es 'Cyan' -->
+            <xsl:when test="value = 'Cyan'">
+                <xsl:attribute name="style">background-color: cyan;</xsl:attribute>
+            </xsl:when>
+            <!-- Si el valor es 'Blue' -->
+            <xsl:when test="value = 'Blue'">
+                <xsl:attribute name="style">background-color: blue; color: white;</xsl:attribute>
+            </xsl:when>
+            <!-- Si el valor es 'Yellow' -->
+            <xsl:when test="value = 'Yellow'">
+                <xsl:attribute name="style">background-color: yellow;</xsl:attribute>
+            </xsl:when>
+            <!-- Si el valor es 'Magenta' -->
+            <xsl:when test="value = 'Magenta'">
+                <xsl:attribute name="style">background-color: magenta;</xsl:attribute>
+            </xsl:when>
+            <!-- Si el valor es 'Orange' -->
+            <xsl:when test="value = 'Orange'">
+                <xsl:attribute name="style">background-color: orange;</xsl:attribute>
+            </xsl:when>
+            <!-- Si el valor es 'Green' -->
+            <xsl:when test="value = 'Green'">
+                <xsl:attribute name="style">background-color: green;</xsl:attribute>
+            </xsl:when>
+            <!-- En caso de que no haya coincidencia o esté vacío -->
+            <xsl:otherwise>
+                <xsl:attribute name="style">background-color: transparent;</xsl:attribute>
+            </xsl:otherwise>
+        </xsl:choose>
+    </td>
                             </xsl:for-each>
                             
                         </tr>
